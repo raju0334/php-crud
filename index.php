@@ -1,3 +1,7 @@
+<?php
+include 'config.php';
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -20,16 +24,30 @@
                 </tr>
         </thead>
         <tbody>
-            <tr>
-            <th scope="row">1</th>
-            <td>Asraf</td>
-            <td>asraf@info.net</td>
-            <td>09859856</td>
-            <th>
-            <a href="index.php"class="btn btn-sm btn-success">Edit</a>
-            <a href="index.php"class="btn btn-sm btn-danger">Delete</a>
-                </th>
-            </tr>
+
+                <?php
+                        $sql = "SELECT * FROM `users`";
+                        $result = mysqli_query($connect, $sql);
+                        if($result){
+                         while($row=mysqli_fetch_assoc($result)){
+                          $id = $row['id'];
+                          $name = $row['name'];
+                          $email = $row['email'];
+                          $phone = $row['phone'];
+                            echo '<tr>
+                            <th scope="row">'.$id.'</th>
+                            <td>'.$name.'</td>
+                            <td>'.$email.'</td>
+                            <td>0'.$phone.'</td>
+                            <th>
+                            <a href="edit.php?id='.$id.'"class="btn btn-sm btn-success">Edit</a>
+                            <a href="delete.php?id='.$id.'"class="btn btn-sm btn-danger">Delete</a>
+                                </th>
+                            </tr>';
+                         }
+                        }
+                ?>
+            
         </tbody>
 
         </div>
