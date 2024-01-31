@@ -52,17 +52,17 @@ $result = mysqli_query($connect, $sql);
                     <div class="card-body">
                             <form action="" method="POST">
                         <div class="mb-3">
-                            <label for="exampleInputName1" class="form-label">Name</label>
-                            <input type="text" name="name" required class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value=<?php echo $name;?>>
+                            <label for="" class="form-label">Name</label>
+                            <input type="text" name="name" required class="form-control" id="" value=<?php echo $name;?>>
                             
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Email</label>
-                            <input type="email" name="email" required class="form-control" id="exampleInputPassword1" value =<?php echo $email;?>>
+                            <label for="" class="form-label">Email</label>
+                            <input type="email" name="email" required class="form-control" id="" value =<?php echo $email;?>>
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputEmail1" class="form-label">Phone</label>
-                            <input type="tel" name="phone" required class="form-control" id="exampleInputPassword1" value =<?php echo $phone;?>>
+                            <label for="" class="form-label">Phone</label>
+                            <input type="tel" name="phone" required class="form-control" id="" value =<?php echo $phone;?>>
                         </div>
                             <button type="submit" name="submit"required class="btn btn-primary">Submit</button>
                         </form> 
@@ -78,7 +78,5 @@ $result = mysqli_query($connect, $sql);
    </div> 
     </div>
         
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>
